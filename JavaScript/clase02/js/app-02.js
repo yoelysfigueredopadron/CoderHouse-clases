@@ -5,7 +5,7 @@
 // resultado = numero1 + numero2;
 // alert("El resultado de la suma es " + resultado);
 
-let lloviendo;
+let lloviendo = true;
 let consulta = prompt("¿Está lloviendo? \n responda si o no");
 
 if (consulta == 'si') {
