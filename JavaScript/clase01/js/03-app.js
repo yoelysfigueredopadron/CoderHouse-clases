@@ -1,13 +1,13 @@
 var nombre1;
 var nombre2;
-console.log(producto);
 
 nombre1 = prompt("Hola! Decime tu nombre");
 nombre2 = prompt("Ahora decime tu Apellido");
 
-alert(nombre1 + nombre2);
+alert(nombre1 + " " + nombre2);
 
-const producto = 'Tablet';
+// const producto = 'Tablet';
+// console.log(producto);
 
 // No se puede reasignar las variables const porque son constantes
 // producto = "Monitor"; error no se puede reasignar
