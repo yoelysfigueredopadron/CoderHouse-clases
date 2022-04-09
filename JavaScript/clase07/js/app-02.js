@@ -15,7 +15,7 @@ class Producto {
         this.nombre = nombre,
         this.precio = precio,
         this.stock = stock,
-        this.subtotalProducto = 0            
+        this.subtotalProducto = 0
     }
 
     subtotalPorProducto() {
