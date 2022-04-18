@@ -1,19 +1,19 @@
-// let numero1 = parseInt(prompt("Ingrese número1:"));
-// let numero2 = parseInt(prompt("Ingrese número2:"));
-// let resultado;
-
-// resultado = numero1 + numero2;
-// alert("El resultado de la suma es " + resultado);
-
-let lloviendo = true;
+let lloviendo;
 let consulta = prompt("¿Está lloviendo? \n responda si o no");
 
+//ejemplo1
 if (consulta == 'si') {
     lloviendo = true;
-} else {
+} else if (consulta == 'no') {
     lloviendo = false;
+} else {
+    alert(":( Ha introducido una respuesta incorrecta. Estimamos que no esta lloviendo acorde a su respuesta.");
 }
 
+// console.log("Lloviendo = " + lloviendo);
+
+
+//ejemplo2
 if (lloviendo) {
     alert("Esta lloviendo");
     console.log("Esta lloviendo");
@@ -21,3 +21,5 @@ if (lloviendo) {
     alert("No esta lloviendo");
     console.log("No esta lloviendo");
 }
+
+// console.log(lloviendo);
