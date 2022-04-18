@@ -2,12 +2,12 @@ let div = document.getElementById("app");
 let parrafo = document.getElementById("parrafo1");
 let paises = document.getElementsByClassName("paises");
 let contenedores = document.getElementsByTagName("div");
-let Div1 = document.createElement("div"); // Crear nodo de tipo Elemento, etiqueta div
+let div1 = document.createElement("div"); // Crear nodo de tipo Elemento, etiqueta div
 
 // Insertar HTML interno
-Div1.innerHTML = "<h2>¡Hola Coder!</h2>";
+div1.innerHTML = "<h2>¡Hola Coder!</h2>";
 // Añadir el nodo Element como hijo de body
-document.body.appendChild(Div1);
+document.body.appendChild(div1);
 
 
 // console.log(div.innerHTML);
