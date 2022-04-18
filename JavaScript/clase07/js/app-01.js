@@ -47,6 +47,7 @@ eliminarProducto();
 mostarProductos = "";
 arregloProductos2.forEach(recorrerArreglo);
 alert(JSON.stringify(arregloProductos2));
+// alert(arregloProductos2); // esto devuelve [object Object] porque el array es un objeto y hay que parsearlo para poder mostrarlo como string
 console.log(arregloProductos2);
 document.getElementById("mostrar").innerHTML = mostarProductos;
 

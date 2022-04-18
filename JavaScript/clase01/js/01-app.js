@@ -1,8 +1,8 @@
-// Inicializar una variable con un valor
+// // Inicializar una variable con un valor
 // var producto = "Monitor de 24 Pulgadas";
 // console.log(producto);
 
-// Las variables se pueden reasignar
+// // Las variables se pueden reasignar
 // producto = 'Monitor de 19 Pulgadas';
 // console.log(producto);
 
@@ -31,10 +31,10 @@
 
 // var 01_; no válidos
 // se pueden comenzar con guión bajo pero sino tiene un sentido especifico se considera mala práctica
-// var _01;
-// var _usuario;
-// var __usuario;
+var _01;
+var _usuario;
+var __usuario;
 
-// var nombreProducto; // Camel case
-// var nombre_producto_categoria_precio;  // Snake case
-// var NombreProducto; // Pascal case
+var nombreProducto; // Camel case
+var nombre_producto_categoria_precio;  // Snake case
+var NombreProducto; // Pascal case
