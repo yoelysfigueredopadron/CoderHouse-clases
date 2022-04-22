@@ -36,4 +36,4 @@ document.body.appendChild(div1);
 // parrafo.parentNode.removeChild(parrafo);
 
 //Eliminando el primer elemento de clase paises
-// paises[0].parentNode.removeChild(paises[0]);
+// paises[0].parentNode.removeChild(paises[3]);

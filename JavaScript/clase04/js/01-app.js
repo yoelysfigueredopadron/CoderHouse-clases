@@ -6,8 +6,8 @@
 // saludar();
 
 // Ejemplo 2
-// function solicitarNombre(){
-//     let nombreIngresado   = prompt("Ingresar nombre");
+// function solicitarNombre() {
+//     let nombreIngresado = prompt("Ingresar nombre");
 //     alert("El nombre ingresado es " + nombreIngresado);
 // }
 
@@ -69,6 +69,7 @@
 //     let resultado = primerNumero + segundoNumero;
 // }
 // //No se puede acceder a la variable resultado fuera del bloque (variable local)
+// console.log(sumar(3, 5));
 // console.log(resultado);
 
 // Ejemplo 7
@@ -76,21 +77,21 @@
 // function sumar(primerNumero, segundoNumero) {
 //     resultado = primerNumero + segundoNumero;
 // }
-// sumar(5,6);
+// sumar(5, 6);
 
 // // Se puede acceder a la variable resultado porque es global
 // console.log(resultado);
 
 // Ejemplo 8
-//Generalmente, las funciones anónimas se asignan a variables declaradas como constantes
-// const suma  = function (a, b) { return a + b };
+// Generalmente, las funciones anónimas se asignan a variables declaradas como constantes
+// const suma = function (a, b) { return a + b };
 // const resta = function (a, b) { return a - b };
-// console.log(suma(15,20));
-// console.log(resta(15,5));
+// console.log(suma(15, 20));
+// console.log(resta(15, 5));
 
 // Ejemplo 9
-// const suma  = (a,b) => a + b;
-// const resta = (a,b) => a - b;
+// const suma = (a, b) => a + b;
+// const resta = (a, b) => a - b;
 
 // //Si una función es una sola línea con retorno y un parámetro puede evitar escribir los ()
 // const iva = x => x * 0.21;

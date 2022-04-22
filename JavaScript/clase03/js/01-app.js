@@ -11,9 +11,9 @@
 // }
 
 // Ejemplo 3 Algoritmo para mostrar la tabla de multiplicación
-// // Solicitamos un valor al usuario
+// Solicitamos un valor al usuario
 // let ingresarNumero = parseInt(prompt("Ingresar el número que desea multiplicar de 1 hasta 10"));
-// // En cada repetición, calculamos el número ingresado x el número de repetición (i)
+// En cada repetición, calculamos el número ingresado x el número de repetición (i)
 // console.log("Tabla de multiplicación del número (" + ingresarNumero + ")");
 // for (let i = 1; i <= 10; i++) {
 //     let resultado = ingresarNumero * i;
@@ -123,7 +123,7 @@
 // }
 // entrada = entrada.toUpperCase();
 
-// // Repetimos hasta que se ingresa "ESC"
+// Repetimos hasta que se ingresa "ESC"
 // while (entrada != "ESC") {
 //     switch (entrada) {
 //         case "ANA":
