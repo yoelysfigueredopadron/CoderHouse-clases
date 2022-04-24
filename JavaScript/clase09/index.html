@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 9</title>
+</head>
+
+<body>
+    <h1>Eventos</h1>
+
+    <!-- Ejemplos app-01.js -->
+    <h2>Coder House</h2>
+    <h3>Ejemplos app-01.js</h3>
+    <button id="boton1">Boton1</button>
+    <button id="boton2">Boton2</button>
+
+    <input type="button" value="boton3" onclick="alert('Respuesta del botón 3')" />
+    <input type="button" value="boton4" id="boton4" />
+
+    <button id="btnMain">botón principal</button>
+
+    <br><br>
+    <hr>
+    <br><br>
+
+    <label for="nombre">Nombre : </label>
+    <input id="nombre" type="text">
+    <br><br>
+    <label for="edad">Edad : </label>
+    <input id="edad" type="number">
+
+    <br><br>
+    <hr>
+    <br><br>
+
+    <form id="formulario">
+        <label for="text">Texto : </label>
+        <input type="text">
+        <br><br>
+        <label for="text">Número : </label>
+        <input type="number">
+        <br><br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <p>Debajo mostraremos los elementos hijos del formulario al hacer click en el botón "enviar"</p>
+    <p id="mostrar-hijos-formulario"></p>
+    <p id="cantidad-elementos-formulario"></p>
+
+    <br><br>
+    <hr>
+    <br><br>
+
+    <button id="boton">Boton</button>
+    <input type="text" id="input">
+
+    <br><br>
+    <hr>
+    <br><br>
+
+    <h3>Ejemplos app-02.js</h3>
+    <p>En este ejemplo solo debe presionar el botón enviar, no se tomará los valores del input sino que se quiere hacer
+        enfasis en como se puede usar tanto getElementById() como querySelector() para seleccionar elementos del DOM</p>
+    <form>
+        <div class="form-group col-md-8">
+            <input id="txtContrasenia" type="text" class="form-control rounded-left"
+                placeholder="Introduzca su Contraseña" />
+        </div>
+        <br>
+        <button type="submit" class="btn btn-info submit" id="enviar">Button</button>
+    </form>
+
+    <br><br>
+
+    <!-- <script src="js/app-01.js"></script> -->
+    <script src="js/app-02.js"></script>
+</body>
+
+</html>
