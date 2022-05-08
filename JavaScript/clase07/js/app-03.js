@@ -6,20 +6,20 @@ let productos = [];
 let repetir = true;
 
 // clase Producto
-// class Producto {
-//     constructor(nombre, precio, cantidad) {
-//         this.nombre = nombre;
-//         this.precio = precio;
-//         this.cantidad = cantidad;
-//     }
-// }
+class Producto {
+    constructor(nombre, precio, cantidad) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+    }
+}
 
 // Función constructora Producto
-function Producto(nombre, precio, cantidad) {
-    this.nombre = nombre;
-    this.precio = precio;
-    this.cantidad = cantidad;
-}
+// function Producto(nombre, precio, cantidad) {
+//     this.nombre = nombre;
+//     this.precio = precio;
+//     this.cantidad = cantidad;
+// }
 
 function crearProducto() {
     let nuevoProducto = [];
@@ -42,7 +42,7 @@ function agregarProductos() {
 
 while (repetir) {
     let consulta;
-    alert("Introduzca los datos del producto.")
+    alert("Introduzca los datos del producto.");
     agregarProductos();
 
     do {
