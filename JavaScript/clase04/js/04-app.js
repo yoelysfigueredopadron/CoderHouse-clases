@@ -1,39 +1,39 @@
-// Calcular costo total de productos y/o servicios seleccionados por el usuario.
+// las funciones del archivo 02-app.js las convertimos en funciones flecha(arrow functions) =>
 let gastoTotal = 0;
 let precioProducto = 0;
 let contador = 0;
 
-alert("Vamos a sumar el total de productos hasta que ingrese un valor igual a cero, menor que cero o que no sea un valor númerico no válido");
+alert(
+	'Vamos a sumar el total de productos hasta que ingrese un valor igual a cero, menor que cero o que no sea un valor númerico no válido'
+);
 
-// Es importante se entienda que las funciones tienen que estar declaradas par ser llamadas y pueden ser llamadas tanto antes de la declaración de las funciones como después de las mismas gracias al Hoisting para mayor información investigar en el sitio https://www.w3schools.com/js/js_hoisting.asp
+// cuando usamos arrow functions => no tenemos que usar la palabra reservada return cuando estás devuelven un valor ya que la acción de esa palabra está implicita en la función =>
+const ingresarPrecio = () => {
+	precioProducto = Number(
+		prompt('Ingrese el precio del producto' + (contador + 1) + ':')
+	);
 
-// // Invocación o llamada a las funciones
-// ingresarPrecio();
-// mostrarTotal();
+	while (precioProducto > 0) {
+		gastoTotal = calcularTotal(precioProducto);
+		contador++;
+		precioProducto = Number(
+			prompt('Ingrese el precio del producto' + (contador + 1) + ':')
+		);
+	}
 
+	if (precioProducto <= 0) {
+		console.log('Ha terminado de introducir los precios de los productos');
+	}
 
-function ingresarPrecio() {
-    precioProducto = Number(prompt("Ingrese el precio del producto" + (contador + 1) + ":"));
-    while (precioProducto > 0) {
-        gastoTotal = calcularTotal(precioProducto);
-        contador++;
-        precioProducto = Number(prompt("Ingrese el precio del producto" + (contador + 1) + ":"));
-    }
+	mostrarTotal();
+};
 
-    if (precioProducto <= 0) {
-        console.log("Ha terminado de introducir los precios de los productos");
-    }
-}
+const calcularTotal = (precioProducto) => gastoTotal + precioProducto;
 
-function calcularTotal(precioProducto) {
-    return gastoTotal + precioProducto;
-}
-
-function mostrarTotal() {
-    console.log("Cantidad de productos: " + contador);
-    console.log("El precio total es $" + gastoTotal);
-}
+const mostrarTotal = () => {
+	console.log('Cantidad de productos: ' + contador);
+	console.log('El precio total es $' + gastoTotal);
+};
 
 // Invocación o llamada a las funciones
 ingresarPrecio();
-mostrarTotal();
