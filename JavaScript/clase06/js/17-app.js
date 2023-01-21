@@ -1,11 +1,3 @@
-// const perros = ["Pupy", "Ronnie"]
-// const gatos = ["Mishi", "Garfield", "Zuri"]
-// const otrosAnimales = ["Leon", "Tigre", "Tibrón"]
-// // const mascotas = perros.concat(gatos)
-// const listaAnimales = otrosAnimales.concat(perros.concat(gatos))
-// // console.log(mascotas)
-// console.log(listaAnimales)
-
 // Declaración de array vacío
 const arreglo = [];
 
@@ -116,9 +108,154 @@ arregloMixto.splice(1, 0, 'React JS', 'Angular JS', 'Vue JS', 'Node JS');
 
 // El método splice() devuelve un array con los elementos eliminados, ejemplo
 let elementosEliminados = arregloMixto.splice(2, 2);
-console.log(`Elementos eliminados: (${elementosEliminados})`);
+// console.log(`Elementos eliminados: (${elementosEliminados})`);
 
-console.log(`Nuevo arreglo: (${arregloMixto})`);
+// console.log(`Nuevo arreglo: (${arregloMixto})`);
 
-// ver al final estos métodos
-// toString(), concat()
+// join() unimos todos los elementos del array con el parámetro especificado
+// console.log(arregloMixto.join());
+// console.log(arregloMixto.join(', '));
+// console.log(arregloMixto.join(' - '));
+
+// concat() podemos concatenar dos o más arrays
+const perros = ['Pupy', 'Ronnie'];
+const gatos = ['Mishi', 'Garfield', 'Zuri'];
+const otrosAnimales = ['Leon', 'Tigre', 'Tibrón'];
+
+// const mascotas = perros.concat(gatos);
+// console.log(mascotas);
+
+// const listaAnimales = otrosAnimales.concat(perros.concat(gatos));
+// console.log(listaAnimales);
+
+// slice() método que devuelve una parte del array con la cual obtenemos uno nuevo, los parámetros son dos e indican el inicio y el fin pero el segundo parámetro final no se incluyen en los resultados. No modifica el array original
+// const cursos = arregloMixto.slice(1, 3); // no devuelve el elemento indice 3
+// console.log(cursos);
+
+// indexOf devuelve el indice de la primera del primer elemento encontrado o devuelve -1 en caso de no encontrar el elemento en el array.
+// console.log(arregloMixto.indexOf('React JS'));
+// console.log(arregloMixto.indexOf('React js'));
+// console.log(arregloMixto.indexOf('React'));
+// console.log(arregloMixto.indexOf('Angular JS'));
+// console.log(arregloMixto.indexOf('Coderhouse'));
+
+// si el elemento se encuentra más de una vez devuelve un elemento devuelve el indice del primero encontrado
+// arregloMixto.push('React JS');
+// console.log(arregloMixto);
+// console.log(arregloMixto.indexOf('React JS'));
+
+// incluydes() devuelve un valor booleano (true/false) tomando un parámetro de entra que se buscará dentro del arreglo si es encontrado devuelve true en caso contrario devuelve false
+// console.log(arregloMixto.includes('React JS'));
+// console.log(arregloMixto.includes('React js'));
+// console.log(arregloMixto.includes('React'));
+// console.log(arregloMixto.includes('Angular JS'));
+// console.log(arregloMixto.includes('Coderhouse'));
+
+// reverse() método que invierte el orden del array, este método sobreescribe el array original
+// arregloMixto.reverse();
+// console.log(arregloMixto);
+
+//-----------------------------------------------------------------------------
+// Ejemplos practico Cargar Array con entradas utilizando prompt()
+// const listaDeFrutas = [];
+// let cantidad = 3;
+
+// alert('Vamos a ingresar 3 frutas en la lista:');
+
+// do {
+// 	let fruta = prompt('Ingresa una fruta:');
+// 	listaDeFrutas.push(fruta);
+// 	console.log(listaDeFrutas);
+// } while (listaDeFrutas.length != cantidad);
+
+// const nuevaListaDeFrutas = listaDeFrutas.concat('Mango', 'kiwi', 'Anana');
+// console.log(nuevaListaDeFrutas);
+
+// alert(nuevaListaDeFrutas.join('\n'));
+
+// // Eliminar un elemento de la nueva lista de frutas
+// const eliminar = (fruta) => {
+// 	let posicion = nuevaListaDeFrutas.indexOf(fruta);
+
+// 	if (posicion != -1) {
+// 		nuevaListaDeFrutas.splice(posicion, 1);
+// 	}
+// };
+
+// eliminar('kiwi');
+
+// alert(nuevaListaDeFrutas.join('\n'));
+// 2;
+// -------------------------------------------------------------------------
+
+// Arreglo de objetos
+// const producto1 = { id: 1, nombre: 'Arroz', precio: 50, cantidad: 1, descripcion: 'Es un buen producto' };
+
+// let productos = [];
+
+// productos = [producto1, { id: 2, nombre: 'Tomate', precio: 80, cantidad: 2, descripcion: 'Es muy saludable para acompañar las comidas' }];
+
+// productos.push({ id: 3, nombre: 'Carne', precio: 800, cantidad: 1, descripcion: 'Proteina de alta calidad' });
+
+// console.log(producto1);
+// console.log(productos);
+
+// -------------------------------------------------------------------------
+// otra forma de crear el arreglo de objetos
+
+// let productos = [
+// 	{ id: 1, nombre: 'Arroz', precio: 50, cantidad: 1, descripcion: 'Es un buen producto' },
+// 	{ id: 2, nombre: 'Tomate', precio: 80, cantidad: 2, descripcion: 'Es muy saludable para acompañar las comidas' },
+// 	{ id: 3, nombre: 'Carne', precio: 800, cantidad: 1, descripcion: 'Proteina de alta calidad' }
+// ];
+
+// console.log('Listado de productos:');
+// for (const producto of productos) {
+// 	console.log(`ID: ${producto.id}`);
+// 	console.log(`Nombre: ${producto.nombre}`);
+// 	console.log(`Precio: ${producto.precio}`);
+// 	console.log(`Cantidad: ${producto.cantidad}`);
+// 	console.log(`Descripción: ${producto.descripcion}`);
+// 	console.log('');
+// }
+
+// for (const producto of productos) {
+// 	console.log(`ID: ${producto.id}\nNombre: ${producto.nombre}\nPrecio: ${producto.precio}\nCantidad: ${producto.cantidad}\nDescripción: ${producto.descripcion}\n\n`);
+// }
+
+// ejemplo agregando objetos a un array con una clase
+class Producto {
+	constructor(id, nombre, precio, cantidad, descripcion) {
+		this.id = id;
+		this.nombre = nombre;
+		this.precio = Number(precio);
+		this.cantidad = Number(cantidad);
+		this.descripcion = descripcion;
+		this.vendido = false;
+		this.subtotal = 0;
+	}
+
+	sumaIva() {
+		this.precio = this.precio * 1.21;
+	}
+}
+
+//Declaramos un array de productos para almacenar los objetos
+const productos = [];
+
+productos.push(new Producto(1, 'Arroz', '50', '2', 'Es un buen producto'));
+productos.push(new Producto(2, 'Tomate', '80', '5', 'Es muy saludable para acompañar las comidas'));
+productos.push(new Producto(3, 'Carne', '800', '1', 'Proteina de alta calidad'));
+
+console.log(productos);
+
+// creamos una función para actualizar el IVA de los productos y luego calcula el subtotal
+function subtotal() {
+	for (const producto of productos) {
+		producto.sumaIva();
+		producto.subtotal = producto.precio * producto.cantidad;
+		producto.vendido = true;
+	}
+}
+
+subtotal();
