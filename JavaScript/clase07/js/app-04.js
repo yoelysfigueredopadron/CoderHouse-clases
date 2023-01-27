@@ -100,7 +100,7 @@ function porCadaUno(arr, fn) {
 	}
 }
 
-const numeros = [5, 6, 7, 8];
+// const numeros = [5, 6, 7, 8];
 
 // porCadaUno(numeros, console.log);
 // porCadaUno(numeros, alert);
@@ -108,6 +108,141 @@ const numeros = [5, 6, 7, 8];
 const duplicado = [];
 
 // usando arrow function como parámetros
-porCadaUno(numeros, (el) => duplicado.push(el * 2));
+// porCadaUno(numeros, (el) => duplicado.push(el * 2));
 
-console.log(duplicado);
+// console.log(duplicado);
+
+// Métodos de búsqueda y transformación
+// forEach -> recorre cada elemento del arreglo ejecutando sobre cada elemento iterado la función
+const numeros = [1, 2, 3, 4, 5, 6, 7, 8];
+
+// numeros.forEach((num) => console.log(num));
+
+// Find -> recibe una función de comparación como parámetro, si la condición de la función de busqueda devuelve true nos retornará el primer elemento encontrado en caso contrario nos devolverá undefined
+const cursos = [
+	{ nombre: 'Desarrollo Web', precio: 10000 },
+	{ nombre: 'Javascript', precio: 15000 },
+	{ nombre: 'Vue JS', precio: 17000 },
+	{ nombre: 'Angular JS', precio: 22000 },
+	{ nombre: 'React JS', precio: 25000 },
+	{ nombre: 'Node JS', precio: 30000 },
+	{ nombre: 'Java', precio: 35000 },
+	{ nombre: 'Python', precio: 32000 },
+	{ nombre: 'C#', precio: 38000 }
+];
+
+// const resultadoBusquedad1 = cursos.find((curso) => curso.nombre === 'Javascript');
+// const resultadoBusquedad2 = cursos.find((curso) => curso.nombre === 'Node JS');
+// const resultadoBusquedad3 = cursos.find((curso) => curso.precio === 25000);
+// const resultadoBusquedad4 = cursos.find((curso) => curso.precio > 15000);
+// const resultadoBusquedad5 = cursos.find((curso) => curso.precio >= 15000);
+
+// console.log(resultadoBusquedad1);
+// console.log(resultadoBusquedad2);
+// console.log(resultadoBusquedad3);
+// console.log(resultadoBusquedad4);
+// console.log(resultadoBusquedad5);
+
+// filter recibe una función de comparación por parámetro y retorna un nuevo array con todos los elementos que cumplan una condición, si no hay coincidencias retornará un array vacío
+
+// operadores relacionales o de comparación (>, >=, <, <=, ==, ===, !=, !==)
+// https://www.w3schools.com/js/js_operators.asp
+// const resultadoFiltrado1 = cursos.filter((curso) => curso.nombre.includes('JS'));
+// const resultadoFiltrado2 = cursos.filter((curso) => curso.nombre.includes('script'));
+// const resultadoFiltrado3 = cursos.filter((curso) => curso.nombre.includes('Java'));
+// const resultadoFiltrado4 = cursos.filter((curso) => curso.precio === 38000);
+// const resultadoFiltrado5 = cursos.filter((curso) => curso.precio > 15000);
+// const resultadoFiltrado6 = cursos.filter((curso) => curso.precio >= 15000);
+
+// console.log(resultadoFiltrado1);
+// console.log(resultadoFiltrado2);
+// console.log(resultadoFiltrado3);
+// console.log(resultadoFiltrado4);
+// console.log(resultadoFiltrado5);
+// console.log(resultadoFiltrado6);
+
+// Some método que retorna true o false si se encuentra un elemento dentro del array
+const existeAlguno = cursos.some((curso) => curso.nombre == 'Python');
+const existeAlguno2 = cursos.some((curso) => curso.nombre == 'CSS');
+
+// console.log(existeAlguno);
+// console.log(existeAlguno2);
+
+// Map devuelve un nuevo array con los elementos transformados según las operaciones de la función pasadas por parámetro, no modifica el array original.
+
+const nombreCursos = cursos.map((curso) => curso.nombre);
+// console.log(nombreCursos);
+
+// Actualizando precio
+const cursosPrecioActualizado = cursos.map((curso) => {
+	return {
+		nombre: curso.nombre,
+		precio: curso.precio * 1.25 * 1.21
+	};
+});
+
+// console.log(cursosPrecioActualizado);
+
+// Reduce nos permite obtener un único valor iterando sobre el array
+const arrayNumeros = [10, 20, 30, 40, 50, 60];
+const total = arrayNumeros.reduce((acumulador, elemento) => acumulador + elemento, 0);
+
+// console.log(total); // 210
+
+// obtenemos el total de los cursos
+const totalAPagar = cursos.reduce((total, curso) => total + curso.precio, 0);
+// console.log(totalAPagar);
+
+const totalAPagarPreciosNuevos = cursosPrecioActualizado.reduce((total, curso) => total + curso.precio, 0);
+// console.log(totalAPagarPreciosNuevos);
+
+// Sort es un método para ordenar un arrary, este método es destructivo por lo cual modifica el array original
+const numeros2 = [40, 1, 5, 200];
+// numeros2.sort((a, b) => a - b); // [ 1, 5, 40, 200 ] Ascendete
+// numeros2.sort((a, b) => b - a); // [ 200, 40, 5, 1 ] Descendente
+
+// console.log(numeros2);
+
+const copyNumeros2 = numeros2;
+copyNumeros2.sort((a, b) => a - b); // [ 1, 5, 40, 200 ] Ascendete
+numeros2.sort((a, b) => b - a); // [ 200, 40, 5, 1 ] Descendente
+
+// console.log(copyNumeros2);
+
+const items = [
+	{ name: 'Pikachu', price: 21 },
+	{ name: 'Charmander', price: 37 },
+	{ name: 'Pidgey', price: 45 },
+	{ name: 'Squirtle', price: 60 }
+];
+
+// ordenando strings de forma ascendente
+// items.sort((a, b) => {
+// 	if (a.name > b.name) {
+// 		return 1;
+// 	}
+
+// 	if (a.name < b.name) {
+// 		return -1;
+// 	}
+
+// 	// a es igual a b
+// 	return 0;
+// });
+
+// ordenando strings de forma descendente
+items.sort((a, b) => {
+	if (a.name < b.name) {
+		return 1;
+	}
+
+	if (a.name > b.name) {
+		return -1;
+	}
+
+	// a es igual a b
+	return 0;
+});
+
+// https://elcodigoascii.com.ar/
+console.log(items);
