@@ -188,8 +188,6 @@ const cursos2 = arregloMixto.slice(1, 5); // obtenemos todos los cursos
 // 2;
 // -------------------------------------------------------------------------
 
-/ -------------------------------------------------------------------------
-
 // Arreglo de objetos
 // const producto1 = { id: 1, nombre: 'Arroz', precio: 50, cantidad: 1, descripcion: 'Es un buen producto' };
 
