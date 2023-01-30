@@ -244,5 +244,194 @@ items.sort((a, b) => {
 	return 0;
 });
 
-// https://elcodigoascii.com.ar/
-console.log(items);
+// Como curiosidad les dejo que el código ASCII es el que ayuda a determinar que carácter de una cadena de texto va primero determinando cual es menor o mayor para ordernar o realizar comparaciones a través de este código. Link de referencia -> https://elcodigoascii.com.ar/
+// console.log(items);
+
+// objeto Math
+// constantes matemáticas Euler y PI
+// console.log(Math.E); // 2.718281828459045
+// console.log(Math.PI); // 3.141592653589793
+
+// Min y Max recib en una lista de argumentos númericos y devuelven el valor máximo o mínimo segun el método utilizado
+let a = Math.min(5, 10);
+let b = Math.min(0, 150, 30, 20, 38);
+let c = Math.min(-5, 10);
+let d = Math.min(-5, -10);
+let e = Math.min(1.5, 2.5);
+
+// console.log('Valores mínimos:');
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+// console.log(e);
+
+let f = Math.max(5, 10);
+let g = Math.max(0, 150, 30, 20, 38);
+let h = Math.max(-5, 10);
+let i = Math.max(-5, -10);
+let j = Math.max(1.5, 2.5);
+
+// console.log('\nValores máximos');
+// console.log(f);
+// console.log(g);
+// console.log(h);
+// console.log(i);
+// console.log(j);
+
+// Infinito es un número que representa el infinito positivo o negativo de un número
+// Un número alcanza el Infinity cuando supera el límite superior de un número: 1.797693134862315E+308.
+// Un número llega a -Infinity cuando supera el límite inferior de un número: -1.797693134862316E+307.
+// console.log(Math.max(55, Infinity, 0, -25, 93, 4)); // Infinity
+// console.log(Math.min(55, 13, 0, -Infinity, 93, 4)); // -Infinity
+
+// ejemplo infinito positivo
+let x = 1.797693134862315e308;
+let y = x * 1.001;
+// console.log('Infinito positivo');
+// console.log('x = ' + x);
+// console.log('y = ' + y);
+
+// ejemplo infinito negativo
+let x1 = -1.797693134862316e307;
+let y1 = x1 * 1.001;
+// console.log('\nInfinito negativo');
+// console.log('x1 = ' + x1);
+// console.log('y1 = ' + y1);
+
+// ceil metodo que redondea hacia el entero superior más próximo
+let a1 = Math.ceil(0.6);
+let b1 = Math.ceil(0.4);
+let c1 = Math.ceil(5);
+let d1 = Math.ceil(5.1);
+let e1 = Math.ceil(-5.1);
+let f1 = Math.ceil(-5.9);
+
+// console.log(a1);
+// console.log(b1);
+// console.log(c1);
+// console.log(d1);
+// console.log(e1);
+// console.log(f1);
+
+// floor método que redondea hacia el entero inferior más próximo
+let a2 = Math.floor(0.6);
+let b2 = Math.floor(0.4);
+let c2 = Math.floor(5);
+let d2 = Math.floor(5.1);
+let e2 = Math.floor(-5.1);
+let f2 = Math.floor(-5.9);
+
+// console.log(a2);
+// console.log(b2);
+// console.log(c2);
+// console.log(d2);
+// console.log(e2);
+// console.log(f2);
+
+// Round redondea el valor
+let a3 = Math.round(2.6);
+let b3 = Math.round(2.5);
+let c3 = Math.round(2.49);
+let d3 = Math.round(-2.6);
+let e3 = Math.round(-2.5);
+let f3 = Math.round(-2.49);
+
+// console.log(a3);
+// console.log(b3);
+// console.log(c3);
+// console.log(d3);
+// console.log(e3);
+// console.log(f3);
+
+// raíz cuadrada Math.sqrt() Si se le envía un número negativo, el método retorna NaN.
+let a4 = Math.sqrt(0);
+let b4 = Math.sqrt(1);
+let c4 = Math.sqrt(9);
+let d4 = Math.sqrt(64);
+let e4 = Math.sqrt(-9);
+
+// console.log(a4);
+// console.log(b4);
+// console.log(c4);
+// console.log(d4);
+// console.log(e4);
+
+// Math.random() genera un número aleatorio entre 0 y 1, siendo el 0 límite inclusivo y el 1 exclusivo.
+
+// random en entre 0 y 1
+let a5 = Math.random();
+
+// random entre 0 y 10
+let b5 = Math.random() * 10;
+
+// random entre 0 y 100
+let c5 = Math.random() * 100;
+
+// random entre 1 y 10
+let d5 = Math.floor(Math.random() * 10 + 1);
+
+// random entre 1 y 100
+let e5 = Math.floor(Math.random() * 100 + 1);
+
+// console.log(a5);
+// console.log(b5);
+// console.log(c5);
+// console.log(d5);
+// console.log(e5);
+
+const generadorNumero = () => {
+	return Math.round(Math.random() * 100);
+};
+
+// console.log(generadorNumero());
+
+// clase Date
+// Instanciar un objeto Date
+// console.log(new Date());
+
+// otros ejemplos
+//En la construcción de fechas los meses comienzan en 0 = Enero y terminan en 11 = diciembre
+// console.log(new Date(2020, 1, 15));
+// Sat Feb 15 2020 00:00:00 GMT-0300 (hora estándar de Argentina)
+
+const casiNavidad = new Date(2021, 11, 25, 23, 59, 59);
+// console.log(casiNavidad);
+// Sat Dec 25 2021 23:59:59 GMT-0300 (hora estándar de Argentina)
+
+const casiNavidad1 = new Date('December 25, 2021 23:59:59');
+// console.log(casiNavidad1);
+// Sat Dec 25 2021 23:59:59 GMT-0300 (hora estándar de Argentina)
+
+const hoy = new Date('December 17, 2021');
+
+// console.log(hoy.toDateString()); // Fri Dec 17 2021
+// console.log(hoy.toLocaleString()); // 17/12/2021 00:00:00
+// console.log(hoy.toLocaleDateString()); // 17/12/2021
+// console.log(hoy.toTimeString()); // 00:00:00 GMT-0300 (hora estándar de Argentina)
+
+// console.log(hoy.getMonth()); // mes 11 (diciembre)
+// console.log(hoy.getFullYear()); // año
+// console.log(hoy.getDay()); // dia de la semana 5 (viernes)
+
+// calcular diferecia entre fechas devuelve el resultado en milisegundos
+// const navidad = new Date('December 25, 2021');
+// const hoy1 = new Date('December 17, 2021');
+
+// console.log(navidad - hoy1); // 691200000
+
+// const milisegundosPorDia = 86400000;
+
+// console.log((navidad - hoy1) / milisegundosPorDia); // 8
+
+// Ejemplos de diferencias entre fechas
+const inicio = new Date();
+
+for (let i = 0; i < 1000; i++) {
+	console.log('haciendo tiempo');
+}
+
+const final = new Date();
+
+console.log('El proceso tardó: ' + (final - inicio) + ' milisegundos');
+// El proceso tardó: 396 milisegundos
