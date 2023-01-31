@@ -188,6 +188,38 @@ const cursos2 = arregloMixto.slice(1, 5); // obtenemos todos los cursos
 // 2;
 // -------------------------------------------------------------------------
 
+// Diferencias entre var, let y const
+// let x = 'Yoelys';
+// console.log(x);
+
+// let x = 5; // Uncaught SyntaxError: Identifier 'x' has already been declared
+
+// Mala práctica, puede crear errores, no usen var
+// var x = 'Yoelys';
+// console.log(x);
+
+// var x = 5;
+// console.log(x);
+
+const PI = 3.141592653589793;
+// PI = 3.14; // Uncaught TypeError: Assignment to constant variable.
+// PI = PI + 10; // Uncaught TypeError: Assignment to constant variable.
+
+// Pueden crear una constante de tipo array:
+// const frutas = ['Mango', 'Banana', 'Melon'];
+
+// se puede modificar el elemento:
+// frutas[0] = 'limón';
+
+// Se puede agregar elementos:
+// frutas.push('Anana');
+
+// Pero no se puede reasignar el array:
+const frutas = ['Mango', 'Banana', 'Melon'];
+
+// frutas = ['Anana', 'frutilla', 'Pera']; // Uncaught TypeError: Assignment to constant variable.
+
+// -------------------------------------------------------------------------
 // Arreglo de objetos
 // const producto1 = { id: 1, nombre: 'Arroz', precio: 50, cantidad: 1, descripcion: 'Es un buen producto' };
 
@@ -197,7 +229,7 @@ const cursos2 = arregloMixto.slice(1, 5); // obtenemos todos los cursos
 
 // productos.push({ id: 3, nombre: 'Carne', precio: 800, cantidad: 1, descripcion: 'Proteina de alta calidad' });
 
-// console.log(producto1);
+// // console.log(producto1);
 // console.log(productos);
 
 // -------------------------------------------------------------------------
@@ -249,7 +281,7 @@ productos.push(new Producto(3, 'Carne', '800', '1', 'Proteina de alta calidad'))
 
 console.log(productos);
 
-// creamos una función para actualizar el IVA de los productos y luego calcula el subtotal
+// // creamos una función para actualizar el IVA de los productos y luego calcula el subtotal
 function subtotal() {
 	for (const producto of productos) {
 		producto.sumaIva();

@@ -1,14 +1,4 @@
 // Funciones de orden superior
-
-// every
-// let arrayNaN = [NaN, NaN, NaN].every(isNaN);
-
-// every
-// let arrayNaN2 = [5, NaN, false].some(isNaN);
-
-// console.log(arrayNaN);
-// console.log(arrayNaN2);
-
 // ejemplo 1
 // let total = 0;
 
@@ -427,11 +417,11 @@ const hoy = new Date('December 17, 2021');
 // Ejemplos de diferencias entre fechas
 const inicio = new Date();
 
-for (let i = 0; i < 1000; i++) {
-	console.log('haciendo tiempo');
-}
+// for (let i = 0; i < 1000; i++) {
+// 	console.log('haciendo tiempo');
+// }
 
 const final = new Date();
 
-console.log('El proceso tardó: ' + (final - inicio) + ' milisegundos');
+// console.log('El proceso tardó: ' + (final - inicio) + ' milisegundos');
 // El proceso tardó: 396 milisegundos
