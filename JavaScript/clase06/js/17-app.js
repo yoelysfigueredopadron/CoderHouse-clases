@@ -201,7 +201,7 @@ const cursos2 = arregloMixto.slice(1, 5); // obtenemos todos los cursos
 // var x = 5;
 // console.log(x);
 
-const PI = 3.141592653589793;
+// const PI = 3.141592653589793;
 // PI = 3.14; // Uncaught TypeError: Assignment to constant variable.
 // PI = PI + 10; // Uncaught TypeError: Assignment to constant variable.
 
@@ -215,7 +215,7 @@ const PI = 3.141592653589793;
 // frutas.push('Anana');
 
 // Pero no se puede reasignar el array:
-const frutas = ['Mango', 'Banana', 'Melon'];
+// const frutas = ['Mango', 'Banana', 'Melon'];
 
 // frutas = ['Anana', 'frutilla', 'Pera']; // Uncaught TypeError: Assignment to constant variable.
 
@@ -229,7 +229,7 @@ const frutas = ['Mango', 'Banana', 'Melon'];
 
 // productos.push({ id: 3, nombre: 'Carne', precio: 800, cantidad: 1, descripcion: 'Proteina de alta calidad' });
 
-// // console.log(producto1);
+// console.log(producto1);
 // console.log(productos);
 
 // -------------------------------------------------------------------------
@@ -281,7 +281,9 @@ productos.push(new Producto(3, 'Carne', '800', '1', 'Proteina de alta calidad'))
 
 console.log(productos);
 
-// // creamos una función para actualizar el IVA de los productos y luego calcula el subtotal
+subtotal();
+
+// creamos una función para actualizar el IVA de los productos y luego calcula el subtotal
 function subtotal() {
 	for (const producto of productos) {
 		producto.sumaIva();
@@ -290,4 +292,4 @@ function subtotal() {
 	}
 }
 
-subtotal();
+console.log(productos);

@@ -84,18 +84,18 @@
 // console.log(dividirConSigno(1000, 10)); //  100
 
 // Recibir funciones por parámetros
-function porCadaUno(arr, fn) {
-	for (const el of arr) {
-		fn(el);
-	}
-}
+// function porCadaUno(arr, fn) {
+// 	for (const el of arr) {
+// 		fn(el);
+// 	}
+// }
 
 // const numeros = [5, 6, 7, 8];
 
 // porCadaUno(numeros, console.log);
 // porCadaUno(numeros, alert);
 
-const duplicado = [];
+// const duplicado = [];
 
 // usando arrow function como parámetros
 // porCadaUno(numeros, (el) => duplicado.push(el * 2));
@@ -104,7 +104,7 @@ const duplicado = [];
 
 // Métodos de búsqueda y transformación
 // forEach -> recorre cada elemento del arreglo ejecutando sobre cada elemento iterado la función
-const numeros = [1, 2, 3, 4, 5, 6, 7, 8];
+// const numeros = [1, 2, 3, 4, 5, 6, 7, 8];
 
 // numeros.forEach((num) => console.log(num));
 
@@ -174,16 +174,16 @@ const cursosPrecioActualizado = cursos.map((curso) => {
 // console.log(cursosPrecioActualizado);
 
 // Reduce nos permite obtener un único valor iterando sobre el array
-const arrayNumeros = [10, 20, 30, 40, 50, 60];
-const total = arrayNumeros.reduce((acumulador, elemento) => acumulador + elemento, 0);
+// const arrayNumeros = [10, 20, 30, 40, 50, 60];
+// const total = arrayNumeros.reduce((acumulador, elemento) => acumulador + elemento, 0);
 
 // console.log(total); // 210
 
 // obtenemos el total de los cursos
-const totalAPagar = cursos.reduce((total, curso) => total + curso.precio, 0);
+// const totalAPagar = cursos.reduce((total, curso) => total + curso.precio, 0);
 // console.log(totalAPagar);
 
-const totalAPagarPreciosNuevos = cursosPrecioActualizado.reduce((total, curso) => total + curso.precio, 0);
+// const totalAPagarPreciosNuevos = cursosPrecioActualizado.reduce((total, curso) => total + curso.precio, 0);
 // console.log(totalAPagarPreciosNuevos);
 
 // Sort es un método para ordenar un arrary, este método es destructivo por lo cual modifica el array original

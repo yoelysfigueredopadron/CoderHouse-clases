@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/estilos.css" />
 		<title>Mi primer App</title>
 	</head>
 	<body>
@@ -41,6 +42,71 @@
 
 		<p>El innerHTML del segundo elemento li es:</p>
 		<p id="mostrar2"></p>
+
+		<!-- innerText -->
+		<h1 id="titulo">Hola Mundo!</h1>
+		<p id="parrafo2">La propiedad innerText de un nodo nos permite modificar su nodo de texto. Es decir, acceder y/o modificar el contenido textual de algún elemento del DOM.</p>
+
+		<!-- innerHTML -->
+		<div id="contenedor"></div>
+
+		<ul id="listaFrutas">
+			<li>Mango</li>
+			<li>Banana</li>
+			<li>Guayaba</li>
+			<li>Fresa</li>
+		</ul>
+
+		<p>Debajo vamos a mostrar el contenido HTML de un elemento ul con el id "myList":</p>
+		<p id="mostrarLista"></p>
+
+		<div id="contenedor2"></div>
+
+		<!-- remove -->
+		<p id="parrafo4">Este parráfo será eliminado</p>
+
+		<input id="nombre" type="text" />
+		<input id="edad" type="number" />
+
+		<ul id="personas"></ul>
+
+		<!-- querySelector -->
+		<div id="contenedor3">
+			<p class="texto">Esto es un texto de prueba</p>
+		</div>
+
+		<p class="ejemplo">Este es el primer parráfo(1) con la clase "ejemplo"</p>
+		<p class="ejemplo">Este es el segundo parráfo(2) con la clase "ejemplo"</p>
+		<p class="ejemplo">Este es el tercer parráfo(3) con la clase "ejemplo"</p>
+
+		<p>Agregamos un borde rojo al primer enlace con el atributo "target" :</p>
+
+		<a href="https://www.w3schools.com">w3schools.com</a>
+		<a href="http://www.disney.com">disney.com</a>
+		<a href="https://www.coderhouse.com/" target="_blank">coderhouse.com</a>
+		<a href="http://www.wikipedia.org" target="_top">wikipedia.org</a>
+
+		<!-- .radio:checked -->
+		<form>
+			<p>Selecciona tu lenguaje web favorito:</p>
+			<input type="radio" id="html" class="radio" name="lenguaje_favorito" value="HTML" />
+			<label for="html">HTML</label><br />
+			<input type="radio" id="css" class="radio" name="lenguaje_favorito" value="CSS" checked />
+			<label for="css">CSS</label><br />
+			<input type="radio" id="javascript" class="radio" name="lenguaje_favorito" value="JavaScript" />
+			<label for="javascript">JavaScript</label>
+
+			<br /><br />
+			<input type="submit" value="Submit" />
+		</form>
+
+		<!-- <div class="card">
+			<img src="./img/arroz.jpg" alt="arroz" style="width: 100%" />
+			<div class="container">
+				<h4><b>Arroz</b></h4>
+				<p>$125</p>
+			</div>
+		</div> -->
 
 		<!-- Las etiquetas script deberían pueden ir con frecuencia antes de la etiqueta de cierre del body -->
 		<script src="./js/app-05.js"></script>
