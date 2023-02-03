@@ -1,3 +1,4 @@
+// dir() es la manera de ver todas las propiedades de un objeto JavaScript específicado por consola
 // console.dir(document);
 // console.dir(document.head);
 // console.dir(document.body);
@@ -7,20 +8,21 @@
 // getElementsByClassName()
 // getElementsByTagName()
 
+// Ejemplo 1
 // getElementById
-let div = document.getElementById('app');
-let parrafo = document.getElementById('parrafo1');
+// let div = document.getElementById('app');
+// let parrafo1 = document.getElementById('parrafo1');
 
 // console.log(div);
-// console.log(parrafo);
+// console.log(parrafo1);
 
 // console.log(div.innerHTML);
-// console.log(parrafo.innerHTML);
+// console.log(parrafo1.innerHTML);
 
 // document.getElementById('mostrar').innerHTML = 'Aprendiendo DOM';
 
-// getElementsByClassName
-let paises = document.getElementsByClassName('paises');
+// Ejemplo 2
+// let paises = document.getElementsByClassName('paises');
 // console.log(paises[0].innerHTML);
 // console.log(paises[1].innerHTML);
 // console.log(paises[2].innerHTML);
@@ -29,15 +31,24 @@ let paises = document.getElementsByClassName('paises');
 // const coleccion = document.getElementsByClassName('ejemplo');
 // coleccion[0].innerHTML = 'Se modifico el contenido del div';
 
+// Ejemplo 3
 // getElementsByTagName
-let contenedores = document.getElementsByTagName('div');
+// let contenedores = document.getElementsByTagName('div');
+
+// Existen dos elementos div vacios que no estoy encontrando, si alguien encuentra este problema agradeceré mucho me comparta bug si lo encuentra. En ocasiones no los toma y el elemento 3 y 4 del arreglo muestra un error en consola
 // console.log(contenedores[0].innerHTML);
 // console.log(contenedores[1].innerHTML);
 // console.log(contenedores[2].innerHTML);
+// console.log(contenedores[3].innerHTML);
+// console.log(contenedores[4].innerHTML);
 
-const coleccionLi = document.getElementsByTagName('li');
-document.getElementById('mostrar2').innerHTML = coleccionLi[1].innerHTML;
+// const coleccionLi = document.getElementsByTagName('li');
+// document.getElementById('mostrar2').innerHTML = coleccionLi[2].innerHTML;
 
+// paises ya estaba creada más arriba en el código pero lo traemos a esta parte para que tenga más claridad de donde se obtiene el arreglo
+// let paises = document.getElementsByClassName('paises');
+
+// buscar html paises y contenedores
 // Recorre HTMLcollection con For...Of
 // for (const pais of paises) {
 // 	console.log(pais.innerHTML);
@@ -47,122 +58,133 @@ document.getElementById('mostrar2').innerHTML = coleccionLi[1].innerHTML;
 // 	console.log(div.innerHTML);
 // }
 
+// Ejemplo 4
 // Modificar Nodos
 // innerText
-let titulo = document.getElementById('titulo');
+// let titulo = document.getElementById('titulo');
 // console.log(titulo.innerText); // “Hola Mundo!”
 
 // cambio el contenido del elemento
-titulo.innerText = 'Hola Coder!';
+// titulo.innerText = 'Hola Coder!';
 // console.log(titulo.innerText); // “Hola Coder!”
 
-let parrafo2 = document.getElementById('parrafo2');
-parrafo2.innerText = 'El parráfo ha sido modificado.';
+// let parrafo2 = document.getElementById('parrafo2');
+// parrafo2.innerText = 'El parráfo ha sido modificado.';
 // console.log(parrafo2.innerText);
 
+// Ejemplo 5
 // innerHTML
-let container = document.getElementById('contenedor');
+// let container = document.getElementById('contenedor');
+
 // cambio el código HTML interno
-container.innerHTML = '<h2>Se inserto un nuevo h2</h2><p>Se inserto un nuevo parrafo</p>';
+// container.innerHTML = '<h2>Se inserto un nuevo h2</h2><p>Se inserto un nuevo parrafo</p>';
 
-let html = document.getElementById('listaFrutas').innerHTML;
-document.getElementById('mostrarLista').innerHTML = html;
+// let html = document.getElementById('listaFrutas').innerHTML;
+// document.getElementById('mostrarLista').innerHTML = html;
 
+// Ejemplo 6
 // className
-let container1 = document.getElementById('contenedor2');
+// let container2 = document.getElementById('contenedor2');
 
-// cambio el código HTML interno
-container1.innerHTML = '<h2>Hola container1!</h2>';
+// // cambio el código HTML interno
+// container2.innerHTML = '<h2>Hola container2!</h2>';
 
-// cambio el atributo class
-container1.className = 'container row';
+// // cambio el atributo class
+// container2.className = 'container row';
 
-// Agregar o quitar Nodos
-// createElement
+// Ejemplo 7
+// Agregar o quitar Nodos (createElement)
 // Crear nodo de tipo Elemento, etiqueta p
-let parrafo3 = document.createElement('p');
+// let parrafo3 = document.createElement('p');
 
 // Insertar HTML interno
 // parrafo3.innerHTML = '<h2>Esto fue insertado dentro de un parráfo creado con el método createElement</h2>';
 
 // Añadir el nodo Element como hijo de body
-document.body.append(parrafo3);
+// document.body.append(parrafo3);
 
-let parrafo4 = document.getElementById('parrafo4');
-//Eleminando el propio elemento
+// Ejemplo 8
+// let parrafo4 = document.getElementById('parrafo4');
+// Eleminando el propio elemento
 // parrafo4.remove();
 
-let paises2 = document.getElementsByClassName('paises');
-//Eliminando el primer elemento de clase paises
+// buscar paises en el html
+// let paises2 = document.getElementsByClassName('paises');
+// Eliminando el primer elemento de clase paises
 // paises2[0].remove();
 
 // propiedad value
-document.getElementById('nombre').value = 'HOMERO';
-document.getElementById('edad').value = 39;
+// document.getElementById('nombre').value = 'HOMERO';
+// document.getElementById('edad').value = 39;
 
+// Ejemplo 9
 // Creando opciones desde un Array
-//Obtenemos el nodo donde vamos a agregar los nuevos elementos
-let padre = document.getElementById('personas');
+// Obtenemos el nodo donde vamos a agregar los nuevos elementos
+// let elementoPadre = document.getElementById('personas');
 
-//Array con la información a agregar
-let personas = ['HOMERO', 'MARGE', 'BART', 'LISA', 'MAGGIE'];
+// Array con la información a agregar
+// let personas = ['HOMERO', 'MARGE', 'BART', 'LISA', 'MAGGIE'];
 
-//Iteramos el array con for...of
-for (const persona of personas) {
-	//Creamos un nodo <li> y agregamos al padre en cada ciclo
-	let li = document.createElement('li');
-	li.innerHTML = persona;
-	padre.appendChild(li);
-}
+// Iteramos el array con for...of
+// for (const persona of personas) {
+// 	//Creamos un nodo <li> y agregamos al elemento padre en cada ciclo un elemento hijo
+// 	let li = document.createElement('li');
+// 	li.innerHTML = persona;
+// 	elementoPadre.appendChild(li);
+// }
 
-let producto = { id: 1, nombre: 'Arroz', precio: 125 };
-let concatenado = 'ID : ' + producto.id + ' - Producto: ' + producto.nombre + ' - Precio: $' + producto.precio;
-let plantilla = `ID: ${producto.id} - Producto ${producto.nombre} - Precio: $${producto.precio}`;
+// Ejemplo 10
+// let producto = { id: 1, nombre: 'Arroz', precio: 125 };
+// let concatenado = 'ID : ' + producto.id + ' - Producto: ' + producto.nombre + ' - Precio: $' + producto.precio;
+// let plantilla = `ID: ${producto.id} - Producto ${producto.nombre} - Precio: $${producto.precio}`;
 
-//El valor es idéntico pero la construcción de la plantilla es màs sencilla
+// El valor es idéntico pero la construcción de la plantilla es màs sencilla con los backticks ``
 // console.log(concatenado);
 // console.log(plantilla);
 
-let producto2 = { id: 1, nombre: 'Arroz', precio: 125 };
-let contenedor = document.createElement('div');
-//Definimos el innerHTML del elemento con una plantilla de texto
-contenedor.innerHTML = `<h3> ID: ${producto2.id}</h3>
-                        <p>  Producto: ${producto2.nombre}</p>
-                        <b> $ ${producto2.precio}</b>`;
-//Agregamos el contenedor creado al body
-document.body.appendChild(contenedor);
+// Ejemplo 11
+// let producto2 = { id: 1, nombre: 'Arroz', precio: 125 };
+// let contenedor = document.createElement('div');
+// //Definimos el innerHTML del elemento con una plantilla de texto
+// contenedor.innerHTML = `<h3> ID: ${producto2.id}</h3>
+//                         <p>  Producto: ${producto2.nombre}</p>
+//                         <b> $ ${producto2.precio}</b>`;
+// //Agregamos el contenedor creado al body
+// document.body.appendChild(contenedor);
 
+// Ejemplo 12
 // Creando elementos desde objetos
-const productos = [
-	{ id: 1, nombre: 'Arroz', precio: 125, img: 'arroz.jpg' },
-	{ id: 2, nombre: 'Fideo', precio: 70, img: 'fideos.jpg' },
-	{ id: 3, nombre: 'Pan', precio: 50, img: 'pan.jpg' },
-	{ id: 4, nombre: 'Flan', precio: 100, img: 'flan.jpg' }
-];
+// const productos = [
+// 	{ id: 1, nombre: 'Arroz', precio: 125, img: 'arroz.jpg' },
+// 	{ id: 2, nombre: 'Fideo', precio: 70, img: 'fideos.jpg' },
+// 	{ id: 3, nombre: 'Pan', precio: 50, img: 'pan.jpg' },
+// 	{ id: 4, nombre: 'Flan', precio: 100, img: 'flan.jpg' }
+// ];
 
-for (const producto of productos) {
-	let contenedor = document.createElement('div');
-	contenedor.classList.add('card');
+// for (const producto of productos) {
+// 	let contenedor = document.createElement('div');
+// 	contenedor.classList.add('card');
 
-	//Definimos el innerHTML del elemento con una plantilla de texto
-	contenedor.innerHTML = `<img src="./img/${producto.img}" alt="${producto.nombre}" style="width: 100%" />
-							<div class="container">
-								<h4><b>${producto.nombre}</b></h4>
-								<p>$${producto.precio}</p>
-							</div>`;
-	document.body.appendChild(contenedor);
-}
+// 	//Definimos el innerHTML del elemento con una plantilla de texto
+// 	contenedor.innerHTML = `<img src="./img/${producto.img}" alt="${producto.nombre}" style="width: 100%" />
+// 							<div class="container">
+// 								<h4><b>${producto.nombre}</b></h4>
+// 								<p>$${producto.precio}</p>
+// 							</div>`;
+// 	document.body.appendChild(contenedor);
+// }
 
+// Ejemplo 13
 // querySelector https://www.w3schools.com/cssref/css_selectors.php
 // El método querySelector() returna el primer elemento que coincide con el selector css.
 // puedo seleccionar la etiqueta <p> siguiendo la sintaxis de CSS para selectores:
-let parrafo5 = document.querySelector('#contenedor3 p');
+// let parrafo5 = document.querySelector('#contenedor3 p');
 
 // seleccionar sólo el contenedor por id con #
-let contenedor2 = document.querySelector('#contenedor3');
+// let contenedor2 = document.querySelector('#contenedor3');
 
 // o por clase:
-let parrafoPorClase = document.querySelector('.texto');
+// let parrafoPorClase = document.querySelector('.texto');
 
 // console.log(parrafo5);
 // console.log(contenedor2);
@@ -170,10 +192,10 @@ let parrafoPorClase = document.querySelector('.texto');
 
 // document.querySelector('p').style.backgroundColor = 'red';
 // document.querySelector('p').style.backgroundColor = '#0000ff';
-document.querySelector('p').style.backgroundColor = 'rgb(0, 255, 0)';
+// document.querySelector('p').style.backgroundColor = 'rgb(0, 255, 0)';
 
-document.querySelector('.paises').style.backgroundColor = 'rgb(255, 0, 0)';
-document.querySelector('.ejemplo').style.backgroundColor = '#4db8ff';
+// document.querySelector('.paises').style.backgroundColor = 'rgb(255, 0, 0)';
+// document.querySelector('.ejemplo').style.backgroundColor = '#4db8ff';
 
 // modificamos el valor de la propiedad innerHTML
 // document.querySelector('.ejemplo').innerHTML = 'Hello World!';
@@ -182,8 +204,9 @@ document.querySelector('.ejemplo').style.backgroundColor = '#4db8ff';
 // const parrafoEjemplo1 = document.querySelector('.ejemplo');
 // parrafoEjemplo1.innerHTML = 'Hello World!';
 
-document.querySelector('a[target]').style.border = '5px solid red';
+// document.querySelector('a[target]').style.border = '5px solid red';
 
+// Ejemplo 14
 // .radio:checked
 // let radioChecked = document.querySelector('.radio:checked');
 // console.log(radioChecked);
