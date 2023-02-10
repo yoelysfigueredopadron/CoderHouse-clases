@@ -152,25 +152,26 @@ const cursos = [
 // console.log(resultadoFiltrado6);
 
 // Some método que retorna true o false si se encuentra un elemento dentro del array
-const existeAlguno = cursos.some((curso) => curso.nombre == 'Python');
-const existeAlguno2 = cursos.some((curso) => curso.nombre == 'CSS');
+// const existeAlguno = cursos.some((curso) => curso.nombre == 'Python');
+// const existeAlguno2 = cursos.some((curso) => curso.nombre == 'CSS');
 
 // console.log(existeAlguno);
 // console.log(existeAlguno2);
 
 // Map devuelve un nuevo array con los elementos transformados según las operaciones de la función pasadas por parámetro, no modifica el array original.
 
-const nombreCursos = cursos.map((curso) => curso.nombre);
+// const nombreCursos = cursos.map((curso) => curso.nombre);
 // console.log(nombreCursos);
 
 // Actualizando precio
-const cursosPrecioActualizado = cursos.map((curso) => {
-	return {
-		nombre: curso.nombre,
-		precio: curso.precio * 1.25 * 1.21
-	};
-});
+// const cursosPrecioActualizado = cursos.map((curso) => {
+// 	return {
+// 		nombre: curso.nombre,
+// 		precio: curso.precio * 1.25 * 1.21
+// 	};
+// });
 
+// console.log(cursos);
 // console.log(cursosPrecioActualizado);
 
 // Reduce nos permite obtener un único valor iterando sobre el array
@@ -187,15 +188,15 @@ const cursosPrecioActualizado = cursos.map((curso) => {
 // console.log(totalAPagarPreciosNuevos);
 
 // Sort es un método para ordenar un arrary, este método es destructivo por lo cual modifica el array original
-const numeros2 = [40, 1, 5, 200];
+// const numeros2 = [40, 1, 5, 200];
 // numeros2.sort((a, b) => a - b); // [ 1, 5, 40, 200 ] Ascendete
 // numeros2.sort((a, b) => b - a); // [ 200, 40, 5, 1 ] Descendente
 
 // console.log(numeros2);
 
-const copyNumeros2 = numeros2;
-copyNumeros2.sort((a, b) => a - b); // [ 1, 5, 40, 200 ] Ascendete
-numeros2.sort((a, b) => b - a); // [ 200, 40, 5, 1 ] Descendente
+// const copyNumeros2 = numeros2;
+// copyNumeros2.sort((a, b) => a - b); // [ 1, 5, 40, 200 ] Ascendete
+// numeros2.sort((a, b) => b - a); // [ 200, 40, 5, 1 ] Descendente
 
 // console.log(copyNumeros2);
 
@@ -221,21 +222,21 @@ const items = [
 // });
 
 // ordenando strings de forma descendente
-items.sort((a, b) => {
-	if (a.name < b.name) {
-		return 1;
-	}
+// items.sort((a, b) => {
+// 	if (a.name < b.name) {
+// 		return 1;
+// 	}
 
-	if (a.name > b.name) {
-		return -1;
-	}
+// 	if (a.name > b.name) {
+// 		return -1;
+// 	}
 
-	// a es igual a b
-	return 0;
-});
+// 	// a es igual a b
+// 	return 0;
+// });
 
 // Como curiosidad les dejo que el código ASCII es el que ayuda a determinar que carácter de una cadena de texto va primero determinando cual es menor o mayor para ordernar o realizar comparaciones a través de este código. Link de referencia -> https://elcodigoascii.com.ar/
-// console.log(items);
+console.log(items);
 
 // objeto Math
 // constantes matemáticas Euler y PI

@@ -29,33 +29,20 @@
 
 // modificamos el contenido del primer div
 // const coleccion = document.getElementsByClassName('ejemplo');
-// coleccion[0].innerHTML = 'Se modifico el contenido del div';
+// coleccion[1].innerHTML = 'Se modifico el contenido del div';
 
 // Ejemplo 3
 // getElementsByTagName
-// let contenedores = document.getElementsByTagName('div');
-
-// Existen dos elementos div vacios que no estoy encontrando, si alguien encuentra este problema agradeceré mucho me comparta bug si lo encuentra. En ocasiones no los toma y el elemento 3 y 4 del arreglo muestra un error en consola
-// console.log(contenedores[0].innerHTML);
-// console.log(contenedores[1].innerHTML);
-// console.log(contenedores[2].innerHTML);
-// console.log(contenedores[3].innerHTML);
-// console.log(contenedores[4].innerHTML);
-
 // const coleccionLi = document.getElementsByTagName('li');
-// document.getElementById('mostrar2').innerHTML = coleccionLi[2].innerHTML;
+// document.getElementById('mostrar2').innerHTML = coleccionLi[0].innerHTML;
 
 // paises ya estaba creada más arriba en el código pero lo traemos a esta parte para que tenga más claridad de donde se obtiene el arreglo
 // let paises = document.getElementsByClassName('paises');
 
-// buscar html paises y contenedores
+// buscar html paises
 // Recorre HTMLcollection con For...Of
 // for (const pais of paises) {
 // 	console.log(pais.innerHTML);
-// }
-
-// for (const div of contenedores) {
-// 	console.log(div.innerHTML);
 // }
 
 // Ejemplo 4
@@ -90,7 +77,7 @@
 // container2.innerHTML = '<h2>Hola container2!</h2>';
 
 // // cambio el atributo class
-// container2.className = 'container row';
+// container2.className = 'container row carrito';
 
 // Ejemplo 7
 // Agregar o quitar Nodos (createElement)
@@ -135,8 +122,8 @@
 
 // Ejemplo 10
 // let producto = { id: 1, nombre: 'Arroz', precio: 125 };
-// let concatenado = 'ID : ' + producto.id + ' - Producto: ' + producto.nombre + ' - Precio: $' + producto.precio;
-// let plantilla = `ID: ${producto.id} - Producto ${producto.nombre} - Precio: $${producto.precio}`;
+// let concatenado = 'ID: ' + producto.id + ' - Producto: ' + producto.nombre + ' - Precio: $' + producto.precio;
+// let plantilla = `ID: ${producto.id} - Producto: ${producto.nombre} - Precio: $${producto.precio}`;
 
 // El valor es idéntico pero la construcción de la plantilla es màs sencilla con los backticks ``
 // console.log(concatenado);
@@ -181,13 +168,13 @@
 // let parrafo5 = document.querySelector('#contenedor3 p');
 
 // seleccionar sólo el contenedor por id con #
-// let contenedor2 = document.querySelector('#contenedor3');
+// let contenedor3 = document.querySelector('#contenedor3');
 
 // o por clase:
 // let parrafoPorClase = document.querySelector('.texto');
 
 // console.log(parrafo5);
-// console.log(contenedor2);
+// console.log(contenedor3);
 // console.log(parrafoPorClase);
 
 // document.querySelector('p').style.backgroundColor = 'red';
