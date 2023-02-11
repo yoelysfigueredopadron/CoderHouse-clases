@@ -10,7 +10,7 @@ const renderizarProductos = () => {
                         <a class="btn-floating halfway-fab wabes-effect waves-light red" id=${producto.id}><i class="material-icons">add_shopping_cart</i></a>
                       </div>
                       <div class="card-content">
-                        <span class="card-title">${producto.titulo}</span>
+                        <span class="card-title">${producto.nombre}</span>
                         <p>$${producto.precio}</p>
                       </div>
                      `;
