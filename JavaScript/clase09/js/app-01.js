@@ -37,13 +37,13 @@ let input2 = document.getElementById('edad');
 // 	console.log('Has presionado una tecla en el input');
 // };
 
-// input1.onchange = () => {
-// 	console.log(`Nombre: ${input1.value}`);
-// };
+input1.onchange = () => {
+	console.log(`Nombre: ${input1.value}`);
+};
 
-// input2.onchange = () => {
-// 	console.log(`Edad: ${input2.value}`);
-// };
+input2.onchange = () => {
+	console.log(`Edad: ${input2.value}`);
+};
 
 // Ejemplo 3
 let miFormulario = document.getElementById('formulario');

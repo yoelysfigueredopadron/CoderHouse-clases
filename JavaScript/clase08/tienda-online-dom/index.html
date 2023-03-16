@@ -1,318 +1,64 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tienda Online</title>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link rel="stylesheet" href="./css/styles.css" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="./css/estilos.css" />
+		<title>BebidasNow</title>
 	</head>
-
 	<body>
-		<header>
-			<h1>Tienda Online</h1>
-			<button id="cesta-carrito"><i class="fas fa-shopping-cart"></i><span id="contador-carrito">0</span></button>
-		</header>
-
-		<main id="contenedor-productos">
+		<div class="topnav" id="myTopnav">
+			<a href="#home" class="active">Home</a>
+			<a href="#contact">Contacto</a>
+			<a href="#about">Nosotros</a>
+			<a href="#about"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+			<a href="javascript:void(0);" id="icon-menu" class="icon">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+		<h1 class="title">Tienda Ecommerce</h1>
+		<div id="container-products" class="container">
 			<!-- <div class="card">
-				<div class="card-image">
-					<img src="./img/agua-pellegrino.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="1"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Agua Pellegrino</span>
-					<p>$800</p>
-				</div>
+				<img src="./img/agua-bonagua.jpg" alt="agua-bonagua" />
+				<h4>agua-bonagua</h4>
+				<p>$500</p>
+				<a class="boton agregar-carrito" href="#">Agregar</a>
 			</div>
 			<div class="card">
-				<div class="card-image">
-					<img src="./img/agua-bonagua.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="2"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Agua Bonaqua</span>
-					<p>$500</p>
-				</div>
+				<img src="./img/agua-pellegrino.jpg" alt="agua-bonagua" />
+				<h4>agua-bonagua</h4>
+				<p>$500</p>
+				<a class="boton agregar-carrito" href="#">Agregar</a>
 			</div>
 			<div class="card">
-				<div class="card-image">
-					<img src="./img/andes-origen.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="3"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Andes Origen</span>
-					<p>$400</p>
-				</div>
+				<img src="./img/andes-origen.jpg" alt="agua-bonagua" />
+				<h4>agua-bonagua</h4>
+				<p>$500</p>
+				<a class="boton agregar-carrito" href="#">Agregar</a>
 			</div>
 			<div class="card">
-				<div class="card-image">
-					<img src="./img/aquarius-pera.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="4"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Aquarius Pera</span>
-					<p>$130</p>
-				</div>
+				<img src="./img/aquarius-pera.jpg" alt="agua-bonagua" />
+				<h4>agua-bonagua</h4>
+				<p>$500</p>
+				<a class="boton agregar-carrito" href="#">Agregar</a>
 			</div>
 			<div class="card">
-				<div class="card-image">
-					<img src="./img/aquarius-pomelo.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="5"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Aquarius Pomelo</span>
-					<p>$190</p>
-				</div>
+				<img src="./img/brahma.jpg" alt="agua-bonagua" />
+				<h4>agua-bonagua</h4>
+				<p>$500</p>
+				<a class="boton agregar-carrito" href="#">Agregar</a>
 			</div>
 			<div class="card">
-				<div class="card-image">
-					<img src="./img/brahma.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="6"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Brahma</span>
-					<p>$490</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/chandon-187.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="7"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Chandon 187</span>
-					<p>$500</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/budweiser-lata.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="8"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Cerveza Budweiser</span>
-					<p>$400</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/pura-frutta-manzana.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="9"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Pura Manzana</span>
-					<p>$180</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/citric-naranja.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="10"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Citric Naranja</span>
-					<p>$180</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/coca-lata.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="11"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Coca Cola</span>
-					<p>$550</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/coca-cola-light.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="12"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Coca Cola Light</span>
-					<p>$450</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/coca-cola-zero.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="13"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Coca Cola Zero</span>
-					<p>$500</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/corona.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="14"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Corona Porrón</span>
-					<p>$700</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/dante-robino-cabernet.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="15"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Dante Robino</span>
-					<p>$900</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/fanta-lata.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="16"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Fanta Naranja</span>
-					<p>$450</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/imperial.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="17"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Cerveza Imperial</span>
-					<p>$650</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/jugo-organico-las-brisas.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="18"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Jugo Las Brisas</span>
-					<p>$800</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/novecento-brut.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="19"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Novecento Brut</span>
-					<p>$600</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/novecento-champagne.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="20"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Novecento Dulce</span>
-					<p>$600</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/novecento-malbec.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="21"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Novecento Malbec</span>
-					<p>$750</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/patagonia.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="22"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Cerveza Patagonia</span>
-					<p>$750</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/quilmes.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="23"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Cerveza Quilmes</span>
-					<p>$400</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/red-bull-lata.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="24"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Red Bull</span>
-					<p>$800</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/speed-lata.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="25"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Speed</span>
-					<p>$780</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/sprite-lata.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="26"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Sprite</span>
-					<p>$450</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/sprite-zero.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="27"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Sprite Zero</span>
-					<p>$450</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="card-image">
-					<img src="./img/stella-negra.jpg" />
-					<a class="btn-floating halfway-fab wabes-effect waves-light red" id="28"><i class="material-icons">add_shopping_cart</i></a>
-				</div>
-				<div class="card-content">
-					<span class="card-title">Stella Artois Negra</span>
-					<p>$850</p>
-				</div>
+				<img src="./img/aquarius-pomelo.jpg" alt="agua-bonagua" />
+				<h4>agua-bonagua</h4>
+				<p>$500</p>
+				<a class="boton agregar-carrito" href="#">Agregar</a>
 			</div> -->
-		</main>
-
-		<div class="modal-contenedor">
-			<div class="modal-carrito">
-				<h3>Carrito</h3>
-				<button id="btn-cerrar-carrito"><i class="fas fa-times-circle"></i></button>
-				<div id="carrito-contenedor"></div>
-				<p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
-				<!-- <button class="realizar-pago">Ir a pagar</button> -->
-			</div>
 		</div>
 
 		<script src="./js/productos.js"></script>
-		<!-- <script src="./js/app.js"></script> -->
-		<script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+		<script src="./js/index.js"></script>
 	</body>
 </html>

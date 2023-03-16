@@ -14,7 +14,6 @@ function agregarproductos(e) {
 
 	if (e.target.classList.contains('agregar-carrito')) {
 		// console.log(e.target.parentElement.parentElement.parentElement);
-
 		const productoAgregado = e.target.parentElement.parentElement.parentElement;
 		leerDatos(productoAgregado);
 	}

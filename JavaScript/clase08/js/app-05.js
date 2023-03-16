@@ -34,7 +34,7 @@
 // Ejemplo 3
 // getElementsByTagName
 // const coleccionLi = document.getElementsByTagName('li');
-// document.getElementById('mostrar2').innerHTML = coleccionLi[0].innerHTML;
+// document.getElementById('mostrar2').innerHTML = coleccionLi[1].innerHTML;
 
 // paises ya estaba creada más arriba en el código pero lo traemos a esta parte para que tenga más claridad de donde se obtiene el arreglo
 // let paises = document.getElementsByClassName('paises');
@@ -98,27 +98,27 @@
 // buscar paises en el html
 // let paises2 = document.getElementsByClassName('paises');
 // Eliminando el primer elemento de clase paises
-// paises2[0].remove();
+// paises2[2].remove();
 
 // propiedad value
-// document.getElementById('nombre').value = 'HOMERO';
-// document.getElementById('edad').value = 39;
+// document.getElementById('nombre').value = 'Yoelys';
+// document.getElementById('edad').value = 35;
 
 // Ejemplo 9
 // Creando opciones desde un Array
 // Obtenemos el nodo donde vamos a agregar los nuevos elementos
-// let elementoPadre = document.getElementById('personas');
+let elementoPadre = document.getElementById('personas');
 
 // Array con la información a agregar
-// let personas = ['HOMERO', 'MARGE', 'BART', 'LISA', 'MAGGIE'];
+let personas = ['HOMERO', 'MARGE', 'BART', 'LISA', 'MAGGIE'];
 
 // Iteramos el array con for...of
-// for (const persona of personas) {
-// 	//Creamos un nodo <li> y agregamos al elemento padre en cada ciclo un elemento hijo
-// 	let li = document.createElement('li');
-// 	li.innerHTML = persona;
-// 	elementoPadre.appendChild(li);
-// }
+for (const persona of personas) {
+	//Creamos un nodo <li> y agregamos al elemento padre en cada ciclo un elemento hijo
+	let li = document.createElement('li');
+	li.innerHTML = persona;
+	elementoPadre.appendChild(li);
+}
 
 // Ejemplo 10
 // let producto = { id: 1, nombre: 'Arroz', precio: 125 };
