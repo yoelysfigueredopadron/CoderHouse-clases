@@ -1,37 +1,44 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tienda Online</title>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" />
-		<link rel="stylesheet" href="./css/styles.css" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="./css/estilos.css" />
+		<title>BebidasNow</title>
 	</head>
-
 	<body>
-		<header>
-			<h1>Tienda Online</h1>
-			<button id="cesta-carrito"><i class="fas fa-shopping-cart"></i><span id="contador-carrito">0</span></button>
-		</header>
+		<div class="topnav" id="myTopnav">
+			<a href="#home" class="active">Home</a>
+			<a href="#contact">Contacto</a>
+			<a href="#about">Nosotros</a>
+			<a href="#cart" id="carrito"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a>
+			<a href="javascript:void(0);" id="icon-menu" class="icon">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
 
-		<main id="contenedor-productos"></main>
+		<h1 class="title">Tienda Ecommerce</h1>
 
-		<div class="modal-contenedor">
-			<div class="modal-carrito">
-				<h3>Carrito</h3>
-				<button id="btn-cerrar-carrito"><i class="fas fa-times-circle"></i></button>
-				<div id="carrito-contenedor"></div>
-				<p class="precioProducto">Precio total: $<span id="precioTotal"></span></p>
-				<!-- <button class="realizar-pago">Ir a pagar</button> -->
+		<!-- The Modal -->
+		<div id="ventanaModal" class="modal">
+			<!-- Modal content -->
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="close">&times;</span>
+					<h2>Carrito de compras</h2>
+				</div>
+				<div class="modal-body"></div>
+				<div class="modal-footer">
+					<h3>Total a Pagar: $ 0</h3>
+				</div>
 			</div>
 		</div>
 
+		<div id="container-products" class="container"></div>
+
 		<script src="./js/productos.js"></script>
-		<script src="./js/app.js"></script>
-		<script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+		<script src="./js/index.js"></script>
 	</body>
 </html>
