@@ -78,7 +78,7 @@ function agregarAlCarrito(productoAgregar) {
 			}
 		});
 
-		// productosCarrito = [...productos]; // ... Spread Operator será estudiado en próxima clases
+		// productosCarrito = [...productos]; // ... Spread Operator será estudiado en próximas clases
 		productosCarrito = productos; // reasignamos con el array productos devuelto por el metodo "map"
 	} else {
 		productosCarrito.push(productoAgregar); // agregamos el nuevo producto ya que no se encontraba dentro de productosCarrito
@@ -99,9 +99,9 @@ function mostrarProductosCarrito() {
 		div.innerHTML = `
 			<img src="${imagen}" width="100">
 			<P>${nombre}</P>
-			<P>${precio}</P>
+			<P>$${precio}</P>
 			<P>${cantidad}</P>
-			<P>${subtotal}</P>
+			<P>$${subtotal}</P>
 			<a href="#" class="borrar-producto" data-id="${id}"> X </a>
 		`;
 
