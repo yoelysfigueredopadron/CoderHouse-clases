@@ -69,14 +69,14 @@
 // localStorage[clave] = '6'; //No se guarda este dato
 
 // JSON.stringify transformar un objeto JavaScript a un string en formato JSON
-const producto1 = { id: 1, nombre: 'Queso', precio: 200, cantidad: 1 };
-const objetoJson = JSON.stringify(producto1);
+// const producto1 = { id: 1, nombre: 'Queso', precio: 200, cantidad: 1 };
+// const objetoJson = JSON.stringify(producto1);
 
 // console.log(objetoJson);
 // console.log(typeof producto1);
 // console.log(typeof objetoJson);
 
-localStorage.setItem('producto', objetoJson);
+// localStorage.setItem('producto', objetoJson);
 // sessionStorage.setItem('producto', objetoJson);
 
 // JSON.parse transformar un string en formato JSON a objeto JavaScript
@@ -93,5 +93,75 @@ localStorage.setItem('producto', objetoJson);
 // console.log(`Precio ${objetoProducto.precio}`);
 // console.log(`Cantidad: ${objetoProducto.cantidad}`);
 
-const producto2 = JSON.parse(localStorage.getItem('producto'));
-console.log(producto2);
+// const producto2 = JSON.parse(localStorage.getItem('producto'));
+// console.log(producto2);
+// console.log(`ID: ${producto2.id} \nNombre: ${producto2.nombre} \nPrecio: ${producto2.precio} \nCantidad: ${producto2.cantidad}`);
+
+// almacenar array de objetos
+const productos = [
+	{ id: 1, producto: 'Arroz', precio: 125 },
+	{ id: 2, producto: 'Fideo', precio: 70 },
+	{ id: 3, producto: 'Pan', precio: 50 },
+	{ id: 4, producto: 'Flan', precio: 100 }
+];
+
+const guardarLocalStorage = (clave, valor) => {
+	localStorage.setItem(clave, valor);
+};
+
+// Almacenar producto por producto
+// for (const producto of productos) {
+// 	guardarLocalStorage('Producto' + producto.id, JSON.stringify(producto));
+// }
+
+guardarLocalStorage('ListaDeProductos', JSON.stringify(productos));
+
+class Producto {
+	constructor(obj) {
+		this.nombre = obj.producto.toUpperCase();
+		this.precio = parseFloat(obj.precio);
+	}
+
+	sumaIva() {
+		this.precio = this.precio * 1.21;
+	}
+}
+
+// Obtenemos el listado de productos almacenado
+const productosAlmacenados = JSON.parse(localStorage.getItem('ListaDeProductos'));
+const arregloProductos = [];
+
+// Iteramos productosAlmacenados con for...of para transformar todos sus objetos a tipo producto.
+for (const objeto of productosAlmacenados) arregloProductos.push(new Producto(objeto));
+
+// Ahora tenemos objetos productos y podemos usar sus métodos
+for (const producto of arregloProductos) {
+	producto.sumaIva();
+}
+
+// console.log(arregloProductos);
+
+// recuperar estados previos de localStorage
+let usuario;
+// let usuarioEnLS = JSON.stringify(localStorage.getItem('usuario'));
+let usuarioEnLS = localStorage.getItem('usuario');
+
+// Si había algo almacenado, lo recupero. Si no le pido un ingreso
+// if (usuarioEnLS) {
+// 	usuario = usuarioEnLS;
+// } else {
+// 	usuario = prompt('Ingrese su nombre de usuario');
+
+// 	if (usuario !== null) {
+// 		localStorage.setItem('usuario', usuario);
+// 	}
+// }
+
+// almacenar array de objetos
+let carrito = [];
+let carritoEnLS = JSON.parse(localStorage.getItem('ListaDeProductos'));
+
+if (carritoEnLS) {
+	carrito = carritoEnLS;
+	console.log(carrito);
+}
