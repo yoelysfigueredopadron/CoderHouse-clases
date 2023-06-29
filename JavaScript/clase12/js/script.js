@@ -97,7 +97,7 @@ const carrito2 = [
 // console.log(carritoLS);
 // console.log(carrito2LS);
 
-// Operador Nullish Coalescing
+// --------------- Operador Nullish Coalescing
 // Solamente obtenderemos nullish con el valor (null o undefined)
 // console.log(0 ?? 'Nullish'); // 0
 // console.log(40 ?? 'Nullish'); // 40
@@ -123,6 +123,56 @@ const usuario = {
     },
 };
 
-console.log(usuario?.cursos?.javascript || 'La propiedad no existe'); // "aprobado"
+// console.log(usuario?.cursos?.javascript || 'La propiedad no existe'); // "aprobado"
 
-console.log(usuario?.trabajos?.coderhouse || 'La propiedad no existe'); // "La propiedad no existe"
+// console.log(usuario?.trabajos?.coderhouse || 'La propiedad no existe'); // "La propiedad no existe"
+
+// --------------- Desestructuración
+// let nombre, edad, javascript;
+
+// nombre = usuario.nombre;
+// edad = usuario.edad;
+// javascript = usuario.cursos.javascript;
+
+// console.log({ nombre, edad, javascript });
+
+// Aplicamos lo anterior usando la desestructuración
+// const { nombre, edad, cursos } = usuario;
+
+// console.log({ nombre, edad, cursos });
+
+// la propiedad cursos se desestructura y se asigna a la variable javascript, lo que te permite acceder directamente a esa propiedad anidada en el objeto original.
+const {
+    nombre,
+    edad,
+    cursos: { javascript: calificacion }, // calificacion representa un alias
+    direccion, // si la propiedad no existe en el objeto no devuelve undefined
+} = usuario;
+
+// console.log({ nombre, edad, calificacion, direccion });
+
+// console.log(carrito2[0]);
+
+// const desestructurar = (objeto) => {
+//     const { id, nombre, precio, img: nombreImagen } = objeto;
+//     console.log({ id, nombre, precio, nombreImagen });
+// };
+
+// otra forma conociendo el nombre de las propiedades que queremos desestructurar
+const desestructurar = ({ id, nombre, precio, img: nombreImagen }) => {
+    console.log({ id, nombre, precio, nombreImagen });
+};
+
+// desestructurar(carrito2[0]);
+// desestructurar(carrito2[1]);
+// desestructurar(carrito2[2]);
+
+const nombres = ['Yoel', 'Marina', 'Juan', 'Gustavo'];
+
+// const [a, b] = nombres;
+// const [, , a, b] = nombres; // omito las dos primeras posiciones
+const [a, b, ...resto] = nombres;
+
+console.log(a);
+console.log(b);
+console.log(resto);
